@@ -19,6 +19,11 @@
     <link rel="stylesheet" href="css/challenges_style.css">
 </head>
 
+<style>
+  .tabs li + li {
+    margin-left: 20px; /* Adjust the value as needed */
+  }
+</style>
 
 <body>  
 <!-- Navigation Bar -->
@@ -65,18 +70,24 @@
   </ul>
 </nav>	
 
-
-
- <!--Accordion Challenges containers Start-->   
-
+<div class="tabs is-centered">
+  <ul>
+    <li id="tab-all" class="is-active"><a onclick="toggleDifficulty('all')">All</a></li>
+    <li id="tab-easy"><a onclick="toggleDifficulty('easy')">Easy</a></li>
+    <li id="tab-mid"><a onclick="toggleDifficulty('mid')">Medium</a></li>
+    <li id="tab-hard"><a onclick="toggleDifficulty('hard')">Hard</a></li>
+  </ul>
+</div>
+<!--Accordion Challenges containers Start-->   
 <!--Accordion tab--->
-<a class="accordion" onclick="toggleAccordion('hidden-challenge-1')" >
+<a class="accordion" onclick="toggleAccordion('hidden-challenge-1')" id="level-easy" >
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1330"><b>[ Cryptography ] :</b> eazyCipher </p>
         </div>
     </div> 
 </a>
+
 
 <!--accordion body--->
 <div class="container is-fluid accordion-body" id="hidden-challenge-1"  style="margin:20px;display:none;border-left:10px solid;">
@@ -109,7 +120,7 @@
 
 
 <!--Accordion tab--->
-<a class="accordion" onclick="toggleAccordion('hidden-challenge-2')" >
+<a class="accordion" onclick="toggleAccordion('hidden-challenge-2')" id="level-mid">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1331"><b>[ Miscellaneous ] :</b> Commitment issues</p>
@@ -155,7 +166,7 @@
 
 
 <!--Accordion tab--->
-<a class="accordion" onclick="toggleAccordion('hidden-challenge-3')" >
+<a class="accordion" onclick="toggleAccordion('hidden-challenge-3')" id="level-mid" >
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1332"><b>[ Steganography ] :</b> National-Stegnographic </p>
@@ -197,7 +208,7 @@
 
 
 <!--Accordion tab--->
-<a class="accordion" onclick="toggleAccordion('hidden-challenge-4')" >
+<a class="accordion" onclick="toggleAccordion('hidden-challenge-4')" id="level-hard" >
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1333"><b>[ Forensics ] : </b>Go Take a Walk! </p>
@@ -239,7 +250,7 @@
 </div>
 
 <!--Accordion tab--->
-<a class="accordion" onclick="toggleAccordion('hidden-challenge-5')" >
+<a class="accordion" onclick="toggleAccordion('hidden-challenge-5')" id="level-easy">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1334"><b>[ Forensics ] :</b> nanotechnology </p>
@@ -283,7 +294,7 @@
 </div>
 
 <!--Accordion tab--->
-<a class="accordion" onclick="toggleAccordion('hidden-challenge-6')" >
+<a class="accordion" onclick="toggleAccordion('hidden-challenge-6')" id="level-easy" >
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1335"><b>[ Reversing ] :</b> Ceaser's secrets </p>
@@ -330,7 +341,7 @@
 </div>
 
 <!--Accordion tab--->
-<a class="accordion" onclick="toggleAccordion('hidden-challenge-7')" >
+<a class="accordion" onclick="toggleAccordion('hidden-challenge-7')" id="level-easy">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1336"><b>[ Miscellaneous ] :</b> Interception: I </p>
