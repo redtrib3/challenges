@@ -55,3 +55,8 @@ font-family:monospace, sans-serif;
   font-family:monospace, sans-serif;
 }
 
+/*filter*/
+.tabs li + li {
+    margin-left: 20px; /* Adjust the value as needed */
+}
+
