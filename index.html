@@ -426,6 +426,50 @@
 </div>
 
 
+<!--Accordion tab--->
+<a class="accordion" onclick="toggleAccordion('hidden-challenge-9')" id="level-easy">
+    <div class="container is-fluid" style="margin:20px">
+        <div class="notification is-dark ">
+            <p id="challenge-header-1338"><b>[ Web ] :</b> sequeli-University  </p>
+        </div>
+    </div> 
+</a>
+
+
+<!--accordion body--->
+<div class="container is-fluid" id="hidden-challenge-9" style="margin:20px;display:none;border-left:10px solid;">
+
+    <div class="notification">
+    <button class="button is-link"  style="position: absolute; top: 10px; right: 10px;margin:10px;" onclick="javascript:window.location='https://sqlilab_1-1-v5987009.deta.app';"> Deploy </button>
+    <span class="tag is-success is-medium">Basic</span><br><br>
+       
+        <b>Description:</b><br>
+        <p>
+        Bypass the university portal to access the secrets.
+        Press the deploy button to start.
+        </p><br>
+        
+    <!--input box--> 
+    <div style="margin:20px;">
+        <div class="field is-grouped">
+        
+          <div class="control is-expanded has-icons-left">
+            <input class="input is-success" id="flag-input-1338" type="text" placeholder="rctf{ ... }">
+            
+            <span class="icon is-small is-left">
+                <i class="fas fa-flag" ></i>
+            </span>
+          </div>
+          
+          <div class="control">
+            <button class="button is-success" id="flag-btn-1338" onclick="submitflag('1338')">Submit Flag</button>
+          </div>
+        </div>
+    </div>  
+    </div>
+</div>
+
+
 <div id="notification" class="notification is-hidden">
   <button class="delete"></button>
   <p id="notif-msg"></p>
