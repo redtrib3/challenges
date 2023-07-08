@@ -348,7 +348,7 @@
 </div>
 
 <!--Accordion tab--->
-<a class="accordion" onclick="toggleAccordion('hidden-challenge-7')" id="level-easy">
+<a class="accordion hide-mode" onclick="toggleAccordion('hidden-challenge-7')" id="level-easy">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1336"><b>[ Miscellaneous ] :</b> Interception: I </p>
@@ -393,7 +393,7 @@
 </div>
 
 <!--Accordion tab--->
-<a class="accordion" onclick="toggleAccordion('hidden-challenge-8')" id="level-hard">
+<a class="accordion hide-mode" onclick="toggleAccordion('hidden-challenge-8')" id="level-hard">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1337"><b>[ Cryptography ] :</b> Gobsufucated! </p>
@@ -440,7 +440,7 @@
 
 
 <!--Accordion tab--->
-<a class="accordion" onclick="toggleAccordion('hidden-challenge-9')" id="level-easy">
+<a class="accordion hide-mode" onclick="toggleAccordion('hidden-challenge-9')" id="level-easy">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1338"><b>[ Web ] :</b> sequeli-University  </p>
@@ -484,7 +484,7 @@
 
 
 <!--Accordion tab--->
-<a class="accordion" onclick="toggleAccordion('hidden-challenge-10')" id="level-mid">
+<a class="accordion hide-mode" onclick="toggleAccordion('hidden-challenge-10')" id="level-mid">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1339"><b>[ Web ] :</b> Crush Search  </p>
@@ -527,7 +527,7 @@
 </div>
 
 <!--Accordion tab--->
-<a class="accordion" onclick="toggleAccordion('hidden-challenge-11')" id="level-mid">
+<a class="accordion hide-mode"  onclick="toggleAccordion('hidden-challenge-11')" id="level-mid">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1340"><b>[ OSINT ] :</b> MapMap!  </p>
@@ -547,7 +547,7 @@
         <p>
         Luca went on a pilgrimage and hasn't come back yet. We have an image of where he was last seen. find the exact coordinates of that location from the image.<br><br>
         
-        The flag is in format : <code>rctf{XX.xxxxxxx,YY.yyyyyy}</code> where x, y are coordinates.
+        The flag is in format : <code>rctf{XX.xxxxxxx_YY.yyyyyy}</code> where x, y are coordinates.
         </p><br>
     <!--input box--> 
     <div style="margin:20px;">
@@ -570,22 +570,32 @@
 </div>
 
 
+<!--accordion challenge containers end-->
 
 <div id="notification" class="notification is-hidden">
   <button class="delete"></button>
   <p id="notif-msg"></p>
 </div>
 
+<!---show_more--->
+<div align="center" id="btn-div-showMore" style="margin:20px;">
 
-<!--accordion challenge containers end-->
+    <button id="show-more-btn" class="button is-link is-outlined" onclick="showMore()">
+       <span class="icon">
+          <i class="fa-solid fa-arrow-down"></i>
+       </span>
+    <span class="btn-text" ><p>Show more</p></span>
+    </button>
 
-<!--footer-->
+</div>
+
+
 <footer class="footer" >
 	<div class="content has-text-centered">
 		<p class="brandlogo" style="font-size: 30px;color: dimgrey;">  RedTrib3 </p>
 		<div class="footer-links ">
 			<a href="/LICENSE" class="button is-text"> MIT License </a>
-			<a href="https://github.com/redtrib3"class="button is-text"> Support</a>	
+			<a href="https://github.com/redtrib3" class="button is-text"> Support</a>	
 		</div><br>
 
 
@@ -593,12 +603,11 @@
 </footer>
 
 
-
-
 <script>
 addEventListener("DOMContentLoaded",function(){Array.from(document.getElementsByTagName("input")).forEach(function(e){e.type==="text"&&(e.value="")})});
 </script>
-<script src="js/burgerToggle.js"></script>
+
+<script src="js/togglers.js"></script>
 <script src="js/accordion.js" ></script>
 <script src="js/submit.js"></script>
 

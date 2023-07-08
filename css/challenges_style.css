@@ -62,3 +62,12 @@ font-family:monospace, sans-serif;
     margin-left: 20px; /* Adjust the value as needed */
 }
 
+/*new below*/
+.hide-mode {
+    display: none;
+}
+
+.btn-div-showMore {
+    display: block;
+}
+
