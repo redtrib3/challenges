@@ -66,22 +66,30 @@ function toggleDifficulty(difficulty) {
 
 function toggleType(type) {
 
-    var currActiveTab = document.querySelector('.type-Class li.is-active');
-    currActiveTab.classList.remove('is-active');
+    var currActiveTypeTab = document.querySelector('.type-Class li.is-active');
+    currActiveTypeTab.classList.remove('is-active');
     
-    var clickedTab = document.getElementById(type);
-    clickedTab.classList.add("is-active");
+    var clickedTypeTab = document.getElementById(type);
+    clickedTypeTab.classList.add("is-active");
     
+    var currActiveDiffTab = document.querySelector('.diff-Class li.is-active');
     var challenges = document.getElementsByClassName('accordion');
 
     for(let i=0 ;i < challenges.length; i++) {
 
+        var chalDiff = currActiveDiffTab.id.replace('tab-','');
         if (type == "type-all") {
-            challenges[i].style.display = 'block';
+            
+            if (challenges[i].id == `level-${chalDiff}`){
+                challenges[i].style.display = 'block';
+            } 
                    
         } else {
-        
-            if (challenges[i].classList.contains(`${type}`)) {
+                        
+            if (challenges[i].classList.contains(`${type}`) && currActiveDiffTab.textContent == "All"){
+                challenges[i].style.display = 'block';
+            }
+            else if (challenges[i].classList.contains(`${type}`)  && challenges[i].id == `level-${chalDiff}`) {
                 challenges[i].style.display = 'block';
             } else {
                 challenges[i].style.display = 'none';
