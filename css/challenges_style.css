@@ -48,6 +48,24 @@ font-family:monospace, sans-serif;
   border-radius: 10px;
 }
 
+.tabs.is-boxed.is-centered.type-Class::-webkit-scrollbar {
+  width: 2px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.tabs.is-boxed.is-centered.type-Class::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+/*Firefox-scrollbar*/
+@-moz-document url-prefix() {
+  .tabs.is-boxed.is-centered.type-Class {
+    scrollbar-color: rgba(255,255,255, 0.1) rgba(255,255,255, 0.1);
+    scrollbar-width: thin;
+  }
+}
+
 
 #notification {
   position: fixed;
@@ -71,9 +89,3 @@ font-family:monospace, sans-serif;
     display: block;
 }
 
-@media (max-width: 768px) {
-  .tabs.is-boxed.is-centered.type-Class {
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-  }
-}
