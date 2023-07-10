@@ -3,15 +3,9 @@
 <head>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-29DVLEW6Q7"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-29DVLEW6Q7');
-    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-29DVLEW6Q7');</script>
 	<meta charset="utf-8">
-	<title>Challenges | redtrib3</title>
+	<title>🚩 Challenges | redtrib3</title>
 	<!--BulmaCSS-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -62,19 +56,30 @@
 			A Collection of CTF/coding challenges created by me.
 		</p>	
 	</div>
+	<div class="tabs is-boxed is-centered type-Class" >
+  <ul>
+    <li id="type-all"   onclick="toggleType('type-all')" class="is-active"><a>All</a></li>
+    <li id="type-web"   onclick="toggleType('type-web')" ><a>Web</a></li>
+    <li id="type-forensic"  onclick="toggleType('type-forensic')" ><a>Forensics</a></li>
+    <li id="type-crypto"   onclick="toggleType('type-crypto')" ><a>Crypto</a></li>
+    <li id="type-reverse" onclick="toggleType('type-reverse')" ><a>Reversing</a></li>
+    <li id="type-osint" onclick="toggleType('type-osint')" ><a>OSINT</a></li>
+    <li id="type-misc" onclick="toggleType('type-misc')" ><a>MISC</a></li>
+    
+  </ul>
+</div>
+ 
 </section>
-
 
 <!---BreadCrumbs-->
 <nav class="breadcrumb is-centered is-medium" style="padding-left:15px;"  >
   <ul>
     <li><a href="/portfolio/index.html">Home</a></li>
-    <li class="is-active" ><a href="#">challenges</a></li>
+    <li class="is-active" ><a href="#">Challenges</a></li>
   </ul>
 </nav>
 	
-
-<div class="tabs is-centered">
+<div class="tabs is-centered diff-Class">
   <ul>
     <li id="tab-all" class="is-active"><a onclick="toggleDifficulty('all')">All</a></li>
     <li id="tab-easy"><a onclick="toggleDifficulty('easy')">Easy</a></li>
@@ -85,9 +90,10 @@
 </div>
 
 
+
 <!--Accordion Challenges containers Start-->   
 <!--Accordion tab--->
-<a class="accordion " onclick="toggleAccordion('hidden-challenge-1')" id="level-easy" >
+<a class="accordion type-crypto" onclick="toggleAccordion('hidden-challenge-1')" id="level-easy" >
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark">
             <p id="challenge-header-1330"><b>[ Cryptography ] :</b> eazyCipher </p>
@@ -127,7 +133,7 @@
 
 
 <!--Accordion tab--->
-<a class="accordion" onclick="toggleAccordion('hidden-challenge-2')" id="level-mid">
+<a class="accordion type-misc" onclick="toggleAccordion('hidden-challenge-2')" id="level-mid">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1331"><b>[ Miscellaneous ] :</b> Commitment issues</p>
@@ -173,10 +179,10 @@
 
 
 <!--Accordion tab--->
-<a class="accordion" onclick="toggleAccordion('hidden-challenge-3')" id="level-mid" >
+<a class="accordion type-misc" onclick="toggleAccordion('hidden-challenge-3')" id="level-mid" >
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
-            <p id="challenge-header-1332"><b>[ Steganography ] :</b> National-Stegnographic </p>
+            <p id="challenge-header-1332"><b>[ Miscellaneous ] :</b> National-Stegnographic </p>
         </div>
     </div> 
 </a>
@@ -215,7 +221,7 @@
 
 
 <!--Accordion tab--->
-<a class="accordion" onclick="toggleAccordion('hidden-challenge-4')" id="level-hard" >
+<a class="accordion type-forensic" onclick="toggleAccordion('hidden-challenge-4')" id="level-hard" >
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1333"><b>[ Forensics ] : </b>Go Take a Walk! </p>
@@ -257,7 +263,7 @@
 </div>
 
 <!--Accordion tab--->
-<a class="accordion" onclick="toggleAccordion('hidden-challenge-5')" id="level-easy">
+<a class="accordion type-forensic" onclick="toggleAccordion('hidden-challenge-5')" id="level-easy">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1334"><b>[ Forensics ] :</b> nanotechnology </p>
@@ -301,7 +307,7 @@
 </div>
 
 <!--Accordion tab--->
-<a class="accordion" onclick="toggleAccordion('hidden-challenge-6')" id="level-easy" >
+<a class="accordion type-reverse" onclick="toggleAccordion('hidden-challenge-6')" id="level-easy" >
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1335"><b>[ Reversing ] :</b> Ceaser's secrets </p>
@@ -348,7 +354,7 @@
 </div>
 
 <!--Accordion tab--->
-<a class="accordion hide-mode" onclick="toggleAccordion('hidden-challenge-7')" id="level-easy">
+<a class="accordion hide-mode type-misc" onclick="toggleAccordion('hidden-challenge-7')" id="level-easy">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1336"><b>[ Miscellaneous ] :</b> Interception: I </p>
@@ -393,7 +399,7 @@
 </div>
 
 <!--Accordion tab--->
-<a class="accordion hide-mode" onclick="toggleAccordion('hidden-challenge-8')" id="level-hard">
+<a class="accordion hide-mode type-crypto" onclick="toggleAccordion('hidden-challenge-8')" id="level-hard">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1337"><b>[ Cryptography ] :</b> Gobsufucated! </p>
@@ -440,7 +446,7 @@
 
 
 <!--Accordion tab--->
-<a class="accordion hide-mode" onclick="toggleAccordion('hidden-challenge-9')" id="level-easy">
+<a class="accordion hide-mode type-web" onclick="toggleAccordion('hidden-challenge-9')" id="level-easy">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1338"><b>[ Web ] :</b> sequeli-University  </p>
@@ -484,7 +490,7 @@
 
 
 <!--Accordion tab--->
-<a class="accordion hide-mode" onclick="toggleAccordion('hidden-challenge-10')" id="level-mid">
+<a class="accordion hide-mode type-web" onclick="toggleAccordion('hidden-challenge-10')" id="level-mid">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1339"><b>[ Web ] :</b> Crush Search  </p>
@@ -527,7 +533,7 @@
 </div>
 
 <!--Accordion tab--->
-<a class="accordion hide-mode"  onclick="toggleAccordion('hidden-challenge-11')" id="level-mid">
+<a class="accordion hide-mode type-osint"  onclick="toggleAccordion('hidden-challenge-11')" id="level-mid">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <p id="challenge-header-1340"><b>[ OSINT ] :</b> MapMap!  </p>
@@ -590,7 +596,7 @@
 </div>
 
 
-<footer class="footer" >
+<footer class="footer" style="margin-top:100px;">
 	<div class="content has-text-centered">
 		<p class="brandlogo" style="font-size: 30px;color: dimgrey;">  RedTrib3 </p>
 		<div class="footer-links ">
@@ -608,7 +614,6 @@ addEventListener("DOMContentLoaded",function(){Array.from(document.getElementsBy
 </script>
 
 <script src="js/togglers.js"></script>
-<script src="js/accordion.js" ></script>
 <script src="js/submit.js"></script>
 
 
