@@ -71,4 +71,9 @@ font-family:monospace, sans-serif;
     display: block;
 }
 
-
+@media (max-width: 768px) {
+  .tabs.is-boxed.is-centered.type-Class {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+}
