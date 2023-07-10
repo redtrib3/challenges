@@ -79,8 +79,7 @@ function toggleType(type) {
 
         var chalDiff = currActiveDiffTab.id.replace('tab-','');
         if (type == "type-all") {
-            
-            if (challenges[i].id == `level-${chalDiff}`){
+            if (chalDiff == 'all' || challenges[i].id == `level-${chalDiff}`){
                 challenges[i].style.display = 'block';
             } 
                    
