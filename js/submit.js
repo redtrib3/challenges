@@ -1,5 +1,5 @@
 
-function showNotification(message,state)
+function showNotification(message, state, duration)
 {
     notification = document.getElementById("notification");
     deleteCross = document.querySelector(".delete");
@@ -17,7 +17,7 @@ function showNotification(message,state)
     
     setTimeout(() => {
         notification.classList.add("is-hidden");
-    }, 4000);
+    }, duration);
     
 }
 
@@ -30,7 +30,7 @@ function submitflag(challengeId)
     thisbutton.classList.add("is-loading");
     
     const startChal = 1330;
-    const endChal = 1340;
+    const endChal = 1341;
     const ids = Object.fromEntries(Array.from({ length: endChal - startChal + 1 }, (_, i) => [startChal + i, false]));
 
     localStorage.setItem("ids",JSON.stringify(ids)); 
@@ -56,7 +56,7 @@ function submitflag(challengeId)
 
             if(responseJson.success === true && ids[responseJson.challenge_id] == true)
             {
-                showNotification("Challenge already completed","is-warning");
+                showNotification("Challenge already completed","is-warning", 4000);
                 thisbutton.classList.remove("is-loading");
             
 
@@ -67,7 +67,7 @@ function submitflag(challengeId)
                 ids[responseJson.challenge_id] = true;
                 flagValue.setAttribute("disabled","");
                 thisbutton.setAttribute("disabled","");  
-                showNotification("Oo! You grabbed the right flag !","is-success");
+                showNotification("Oo! You grabbed the right flag !","is-success", 4000);
                 document.getElementById(`challenge-header-${challengeId}`).style.color = "#59ff59";
                 thisbutton.classList.remove("is-loading");
             
@@ -76,7 +76,7 @@ function submitflag(challengeId)
 
             if (responseJson.success === false)
             {
-                showNotification("Thats an Incorrect Flag :(","is-danger");
+                showNotification("Thats an Incorrect Flag :(","is-danger",4000);
                 thisbutton.classList.remove("is-loading");
             
             }
@@ -90,7 +90,7 @@ function submitflag(challengeId)
     
     else
     {
-        showNotification("Flag field cannot be empty .","is-info");
+        showNotification("Flag field cannot be empty .","is-info",3000);
         thisbutton.classList.remove("is-loading");
     }
     
