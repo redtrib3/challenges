@@ -615,6 +615,49 @@
     </div>
 </div>
 
+<!--Accordion tab--->
+<a class="accordion hide-mode type-misc"  onclick="toggleAccordion('hidden-challenge-13')" id="level-easy">
+    <div class="container is-fluid" style="margin:20px">
+        <div class="notification is-dark ">
+            <p id="challenge-header-1342"><b>[ Miscellaneous ] :</b> Red or Blue</p>
+        </div>
+    </div> 
+</a>
+
+
+<!--accordion body--->
+<div class="container is-fluid" id="hidden-challenge-13" style="margin:20px;display:none;border-left:10px solid;">
+
+    <div class="notification">
+    <button class="button is-info is-small" id="download-1342" style="position: absolute; top: 10px; right: 10px;margin:10px;" onclick="downloadFile('red_blue_pill.png',1342)">Download Task files</button>
+    <span class="tag is-success is-medium">Basic</span><br><br>
+       
+        <b>Description:</b><br>
+        <p >
+            Would you rather choose the red pill or the blue pill?
+        </p><br>
+        <p>Submit the flag in format<code> rctf{&lt;flag&gt;} </code></p>
+    <!--input box--> 
+    <div style="margin:20px;">
+        <div class="field is-grouped">
+        
+          <div class="control is-expanded has-icons-left">
+            <input class="input is-success" id="flag-input-1342" type="text" placeholder="rctf{ ... }">
+            
+            <span class="icon is-small is-left">
+                <i class="fas fa-flag" ></i>
+            </span>
+          </div>
+          
+          <div class="control">
+            <button class="button is-success" id="flag-btn-1342" onclick="submitflag('1342')">Submit Flag</button>
+          </div>
+        </div>
+    </div>  
+    </div>
+</div>
+
+
 
 <!--accordion challenge containers end-->
 

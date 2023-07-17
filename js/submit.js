@@ -30,7 +30,7 @@ function submitflag(challengeId)
     thisbutton.classList.add("is-loading");
     
     const startChal = 1330;
-    const endChal = 1341;
+    const endChal = 1342;
     const ids = Object.fromEntries(Array.from({ length: endChal - startChal + 1 }, (_, i) => [startChal + i, false]));
 
     localStorage.setItem("ids",JSON.stringify(ids)); 
