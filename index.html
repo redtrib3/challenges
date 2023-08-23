@@ -19,6 +19,10 @@
 	<meta name="theme-color" content="#ffffff">
 	<!--FontAwesome-->
 	<script src="https://kit.fontawesome.com/9cae3ad966.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/components/prism-bash.min.js"></script>
+
     <link rel="stylesheet" href="css/challenges_style.css">
 </head>
 
@@ -658,6 +662,73 @@
 </div>
 
 
+<!--Accordion tab--->
+<a class="accordion hide-mode type-web"  onclick="toggleAccordion('hidden-challenge-14')" id="level-hard">
+    <div class="container is-fluid" style="margin:20px">
+        <div class="notification is-dark ">
+            <p id="challenge-header-1343"><b>[ Web ] :</b> Pipeline</p>
+        </div>
+    </div> 
+</a>
+
+
+<!--accordion body--->
+<div class="container is-fluid" id="hidden-challenge-14" style="margin:20px;display:none;border-left:10px solid;">
+
+    <div class="notification">
+    <span class="tag is-danger is-medium">Hard</span><br><br>
+       
+        <b>Description:</b><br>
+        <p>
+            Pipeline Inc. believes that a rapid CI/CD pipeline is the key to a successful technology corporation. In fact, they are so committed to this concept that they named their company after it.
+            
+        </p><br>
+<div class="container">
+  <div class="content">
+    <strong>Deployment instructions:</strong>
+    <ul>
+      <li>
+        <span">1. Pull the image:</span>
+        <br>
+        <pre><code class="language-bash">$ docker pull redtrib3/rctf-pipeline-ctf</code></pre>
+      </li>
+      <li>
+        <span>2. Run the container:</span>
+        <br>
+        <pre><code class="language-sh">$ docker run -d -p 8081:8081 -v /etc/machine-id:/etc/machine-id --cgroupns host redtrib3/rctf-pipeline-ctf</code></pre>
+      </li>
+      <li>
+        <span>3. Access the container at</span>
+        <br>
+        <code><a href="http://127.0.0.1:8081" class="has-text-success">http://127.0.0.1:8081</a></code>
+      </li>
+    </ul>
+  </div>
+</div>
+
+</div>
+
+    <!--input box--> 
+    <div style="margin:20px;">
+        <div class="field is-grouped">
+        
+          <div class="control is-expanded has-icons-left">
+            <input class="input is-success" id="flag-input-1343" type="text" placeholder="rctf{ ... }">
+            
+            <span class="icon is-small is-left">
+                <i class="fas fa-flag" ></i>
+            </span>
+          </div>
+          
+          <div class="control">
+            <button class="button is-success" id="flag-btn-1343" onclick="submitflag('1343')">Submit Flag</button>
+          </div>
+        </div>
+    </div>  
+    </div>
+</div>
+
+
 
 <!--accordion challenge containers end-->
 
@@ -693,6 +764,14 @@
 
 
 <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    Prism.highlightAll();
+  });
+</script>
+
+
+<script>
+
 addEventListener("DOMContentLoaded",function(){Array.from(document.getElementsByTagName("input")).forEach(function(e){e.type==="text"&&(e.value="")})});
 </script>
 
