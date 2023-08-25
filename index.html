@@ -27,17 +27,18 @@
 </head>
 
 <body>  
+
 <!-- Navigation Bar -->
 <nav class="navbar is-dark has-shadow" role="navigation" aria-label="main navigation">
 	
 	<div class="navbar-brand">
-		<a class="navbar-item brandlogo" href="/portfolio" >redtrib3</a>
+		<a class="navbar-item brandlogo" href="/" >redtrib3</a>
 	</div>
 
 	<a class="navbar-burger" id="burger">
 	  <span ></span>
-     	  <span ></span>
-      	  <span ></span>
+      <span ></span>
+      <span ></span>
 	</a>
 
 	<div id="links_Nav" class="navbar-menu" >
@@ -51,11 +52,17 @@
 	</div>	
 </nav>
 
+
+<div class="progress-container" >
+    <progress id="pr-bar-1" class="progress" value="0" max="100"></progress>
+</div>
+
 <section class="hero is-success">
 	<div class="hero-body">
 		<p class="title" style="font-family: monospace;font-size: 40px;">
 			Challenges
 		</p>
+
 		<p class="subtitle">
 			A Collection of CTF/coding challenges created by me.
 		</p>	
@@ -71,12 +78,15 @@
         <li id="type-misc" onclick="toggleType('type-misc')" ><a>MISC</a></li>
       </ul>
     </div>
+
 </section>
+
+
 
 <!---BreadCrumbs-->
 <nav class="breadcrumb is-centered is-medium" style="padding-left:15px;"  >
   <ul>
-    <li><a href="redtrib3.me/">Home</a></li>
+    <li><a href="//redtrib3.me">Home</a></li>
     <li class="is-active" ><a href="#">Challenges</a></li>
   </ul>
 </nav>
@@ -87,19 +97,19 @@
     <li id="tab-easy"><a onclick="toggleDifficulty('easy')">Easy</a></li>
     <li id="tab-mid"><a onclick="toggleDifficulty('mid')">Medium</a></li>
     <li id="tab-hard"><a onclick="toggleDifficulty('hard')">Hard</a></li>
-    
   </ul>
 </div>
-
-
 
 <!--Accordion Challenges containers Start-->   
 <!--Accordion tab--->
 <a class="accordion type-crypto" onclick="toggleAccordion('hidden-challenge-1')" id="level-easy" >
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark">
-            <p id="challenge-header-1330"><b>[ Cryptography ] :</b> eazyCipher </p>
-        </div>
+            <div class="header-wrapper">
+                <p id="challenge-header-1330"><b>[ Cryptography ] :</b> eazyCipher </p>
+                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+            </div>
+       </div>
     </div> 
 </a>
 
@@ -138,7 +148,10 @@
 <a class="accordion type-misc" onclick="toggleAccordion('hidden-challenge-2')" id="level-mid">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
-            <p id="challenge-header-1331"><b>[ Miscellaneous ] :</b> Commitment issues</p>
+            <div class="header-wrapper">
+                <p id="challenge-header-1331"><b>[ Miscellaneous ] :</b> Commitment issues</p>
+                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+            </div>
         </div>
     </div> 
 </a>
@@ -184,7 +197,10 @@
 <a class="accordion type-misc" onclick="toggleAccordion('hidden-challenge-3')" id="level-mid" >
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
-            <p id="challenge-header-1332"><b>[ Miscellaneous ] :</b> National-Steggraphic </p>
+            <div class="header-wrapper">
+                <p id="challenge-header-1332"><b>[ Miscellaneous ] :</b> National-Steggraphic </p>
+                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+            </div>
         </div>
     </div> 
 </a>
@@ -226,7 +242,10 @@
 <a class="accordion type-forensic" onclick="toggleAccordion('hidden-challenge-4')" id="level-hard" >
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
-            <p id="challenge-header-1333"><b>[ Forensics ] : </b>Go Take a Walk! </p>
+            <div class="header-wrapper"> 
+                <p id="challenge-header-1333"><b>[ Forensics ] : </b>Go Take a Walk! </p>
+                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+            </div>
         </div>
     </div> 
 </a>
@@ -268,7 +287,10 @@
 <a class="accordion type-forensic" onclick="toggleAccordion('hidden-challenge-5')" id="level-easy">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
-            <p id="challenge-header-1334"><b>[ Forensics ] :</b> nanotechnology </p>
+            <div class="header-wrapper">
+                <p id="challenge-header-1334"><b>[ Forensics ] :</b> nanotechnology </p>
+                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+            </div>
         </div>
     </div> 
 </a>
@@ -312,7 +334,10 @@
 <a class="accordion type-reverse" onclick="toggleAccordion('hidden-challenge-6')" id="level-easy" >
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
-            <p id="challenge-header-1335"><b>[ Reversing ] :</b> Ceaser's secrets </p>
+            <div class="header-wrapper">
+                <p id="challenge-header-1335"><b>[ Reversing ] :</b> Ceaser's secrets </p>
+                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+            </div>
         </div>
     </div> 
 </a>
@@ -359,7 +384,10 @@
 <a class="accordion hide-mode type-misc" onclick="toggleAccordion('hidden-challenge-7')" id="level-easy">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
-            <p id="challenge-header-1336"><b>[ Miscellaneous ] :</b> Interception: I </p>
+            <div class="header-wrapper">
+                <p id="challenge-header-1336"><b>[ Miscellaneous ] :</b> Interception: I </p>
+                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+            </div>
         </div>
     </div> 
 </a>
@@ -404,7 +432,10 @@
 <a class="accordion hide-mode type-crypto" onclick="toggleAccordion('hidden-challenge-8')" id="level-hard">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
-            <p id="challenge-header-1337"><b>[ Cryptography ] :</b> Gobsufucated! </p>
+            <div class="header-wrapper">
+                <p id="challenge-header-1337"><b>[ Cryptography ] :</b> Gobsufucated! </p>
+                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+            </div>
         </div>
     </div> 
 </a>
@@ -451,7 +482,10 @@
 <a class="accordion hide-mode type-web" onclick="toggleAccordion('hidden-challenge-9')" id="level-easy">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
-            <p id="challenge-header-1338"><b>[ Web ] :</b> sequeli-University  </p>
+            <div class="header-wrapper">
+                <p id="challenge-header-1338"><b>[ Web ] :</b> sequeli-University  </p>
+                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+            </div>
         </div>
     </div> 
 </a>
@@ -495,7 +529,10 @@
 <a class="accordion hide-mode type-web" onclick="toggleAccordion('hidden-challenge-10')" id="level-mid">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
-            <p id="challenge-header-1339"><b>[ Web ] :</b> Crush Search  </p>
+            <div class="header-wrapper">
+                <p id="challenge-header-1339"><b>[ Web ] :</b> Crush Search  </p>
+                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+            </div>
         </div>
     </div> 
 </a>
@@ -538,7 +575,10 @@
 <a class="accordion hide-mode type-osint"  onclick="toggleAccordion('hidden-challenge-11')" id="level-mid">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
-            <p id="challenge-header-1340"><b>[ OSINT ] :</b> MapMap!  </p>
+            <div class="header-wrapper">
+                <p id="challenge-header-1340"><b>[ OSINT ] :</b> MapMap!  </p>
+                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+            </div>
         </div>
     </div> 
 </a>
@@ -580,8 +620,11 @@
 <!--Accordion tab--->
 <a class="accordion hide-mode type-web"  onclick="toggleAccordion('hidden-challenge-12')" id="level-hard">
     <div class="container is-fluid" style="margin:20px">
-        <div class="notification is-dark ">
-            <p id="challenge-header-1341"><b>[ Web ] :</b> Breaking </p>
+        <div class="notification is-dark">
+            <div class="header-wrapper">
+                <p id="challenge-header-1341"><b>[ Web ] :</b> Breaking </p>
+                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+            </div>
         </div>
     </div> 
 </a>
@@ -623,7 +666,10 @@
 <a class="accordion hide-mode type-misc"  onclick="toggleAccordion('hidden-challenge-13')" id="level-easy">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
-            <p id="challenge-header-1342"><b>[ Miscellaneous ] :</b> Red or Blue</p>
+            <div class="header-wrapper">
+                <p id="challenge-header-1342"><b>[ Miscellaneous ] :</b> Red or Blue</p>
+                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+            </div>
         </div>
     </div> 
 </a>
@@ -666,7 +712,10 @@
 <a class="accordion hide-mode type-web" onclick="toggleAccordion('hidden-challenge-14')" id="level-hard">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark">
-            <p id="challenge-header-1343"><b>[ Web ] :</b> Pipeline</p>
+            <div class="header-wrapper">
+                <p id="challenge-header-1343"><b>[ Web ] :</b> Pipeline</p>
+                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+            </div>
         </div>
     </div>
 </a>
@@ -757,12 +806,8 @@
   document.addEventListener("DOMContentLoaded", function () {
     Prism.highlightAll();
   });
-</script>
 
-
-<script>
-
-addEventListener("DOMContentLoaded",function(){Array.from(document.getElementsByTagName("input")).forEach(function(e){e.type==="text"&&(e.value="")})});
+    addEventListener("DOMContentLoaded",function(){Array.from(document.getElementsByTagName("input")).forEach(function(e)   {e.type==="text"&&(e.value="")})});
 </script>
 
 <script src="js/togglers.js"></script>

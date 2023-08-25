@@ -9,11 +9,6 @@
 
 
 
-/*.brandlogo:hover{
-	font-size: 36px;
-	transition: 1s;
-}*/
-
 #burger span{
 	background-color: white;
 }
@@ -89,3 +84,47 @@ font-family:monospace, sans-serif;
     display: block;
 }
 
+/*chal completion progress bar*/
+.progress-container {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+
+}
+
+.progress {
+  border: none;
+  height: 4px;
+  background-color:#363636;
+}
+
+/* For Chrome and Safari */
+.progress-container progress::-webkit-progress-value {
+  background-color:#0bfc03 ;
+}
+
+/* For Firefox */
+.progress-container progress::-moz-progress-bar {
+  background-color:#0bfc03 ;
+}
+
+/* For non-WebKit browsers (edge, IE) */
+.progress-container progress::-ms-fill {
+  background-color: #0bfc03 ;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.chevron-dropdown-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust this value as needed */
+    transform: translateY(-50%);
+    z-index: 1;
+    opacity:60%
+}

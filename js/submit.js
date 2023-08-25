@@ -1,4 +1,7 @@
 
+var completedChallenges = 0;
+let progressBar = document.getElementById('pr-bar-1');
+
 function showNotification(message, state, duration)
 {
     notification = document.getElementById("notification");
@@ -23,7 +26,7 @@ function showNotification(message, state, duration)
 
 function submitflag(challengeId)
 {
-    
+
     let flagValue = document.getElementById(`flag-input-${challengeId}`);
     let thisbutton = document.getElementById(`flag-btn-${challengeId}`);
     
@@ -70,7 +73,10 @@ function submitflag(challengeId)
                 showNotification("Oo! You grabbed the right flag !","is-success", 4000);
                 document.getElementById(`challenge-header-${challengeId}`).style.color = "#59ff59";
                 thisbutton.classList.remove("is-loading");
-            
+                
+                completedChallenges++;
+                progressBar.value = (completedChallenges / Object.keys(ids).length) * 100; 
+                               
             }
             
 

@@ -109,7 +109,7 @@ function toggleType(type) {
 
 function toggleAccordion(containerId) {
     
-  var container = document.getElementById(containerId);
+  var container = document.getElementById(containerId);    
     
   for(let i = 1; i <= challengeMax;i++){
 
@@ -160,5 +160,6 @@ function showMore() {
         }
     }
 }
+
 
 
