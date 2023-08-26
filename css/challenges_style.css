@@ -128,3 +128,8 @@ font-family:monospace, sans-serif;
     z-index: 1;
     opacity:60%
 }
+
+/*syntax highlight fix*/
+.token-number{
+    color: green;
+}

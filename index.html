@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-29DVLEW6Q7"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-29DVLEW6Q7');</script>
 	<meta charset="utf-8">
@@ -19,11 +18,10 @@
 	<meta name="theme-color" content="#ffffff">
 	<!--FontAwesome-->
 	<script src="https://kit.fontawesome.com/9cae3ad966.js" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/components/prism-bash.min.js"></script>
 
-    <link rel="stylesheet" href="css/challenges_style.css">
+
+    <link rel="preload" href="css/challenges_style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/prism.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 </head>
 
 <body>  
@@ -120,7 +118,7 @@
         <span class="tag is-success is-medium"> Basic</span><br><br>
 
         <b>Description:</b> Perhaps wearing glasses would be 62x more helpful. <br><br> 
-        <pre class="highlight"><code> pOlpGbhai9Wfo8eoPZZtBcugfwozx9RCGFmSA5EqovtOowNUs0O40J5S2AlkSTE8CmLyhpMJEej </code></pre><br><br>
+        <pre><code class="language-markdown">pOlpGbhai9Wfo8eoPZZtBcugfwozx9RCGFmSA5EqovtOowNUs0O40J5S2AlkSTE8CmLyhpMJEej</code></pre><br><br>
        
     <!--input box--> 
     <div style="margin:20px;">
@@ -595,7 +593,7 @@
         <p>
         Luca went on a pilgrimage and hasn't come back yet. We have an image of where he was last seen. find the exact coordinates of that location from the image.<br><br>
         
-        The flag is in format : <code>rctf{XX.xxxxxxx_YY.yyyyyy}</code> where x, y are coordinates.
+        The flag is in format : <pre><code class="language-python">rctf{XX.xxxxxxx_YY.yyyyyy}</code></pre> where x, y are coordinates.
         </p><br>
     <!--input box--> 
     <div style="margin:20px;">
@@ -686,7 +684,7 @@
         <p >
             Would you rather choose the red pill or the blue pill?
         </p><br>
-        <p>Submit the flag in format<code> rctf{&lt;flag&gt;} </code></p>
+        <p>Submit the flag in format: <code> rctf{&lt;flag&gt;} </code></p>
     <!--input box--> 
     <div style="margin:20px;">
         <div class="field is-grouped">
@@ -735,21 +733,21 @@
                     <li>
                         <span>1. Pull the image:</span>
                         <br>
-                        <pre><code class="language-bash">$ docker pull redtrib3/rctf-pipeline-ctf</code></pre>
+                        <pre>$<code class="language-git"> docker pull redtrib3/rctf-pipeline-ctf</code></pre>
                     </li>
                     <li>
                         <span>2. Run the container:</span>
                         <br>
-                        <pre><code class="language-sh">$ docker run -d -p 8081:8081 -v /etc/machine-id:/etc/machine-id --cgroupns host redtrib3/rctf-pipeline-ctf</code></pre>
+                        <pre>$<code class="language-git"> docker run -d -p 8081:8081 -v /etc/machine-id:/etc/machine-id --cgroupns host redtrib3/rctf-pipeline-ctf</code></pre>
                     </li>
                     <li>
                         <span>3. Access the container at</span>
                         <br>
-                        <code><a href="http://127.0.0.1:8081" class="has-text-success">http://127.0.0.1:8081</a></code>
+                        <pre><code class="language-bash"><a href="http://127.0.0.1:8081" class="has-text-success">http://127.0.0.1:8081</a></code></pre>
                     </li>
                 </ul>
             </div>
-        </div>
+        </div><br>
         <!-- Input box -->
         <div style="margin:20px;">
             <div class="field is-grouped">
@@ -801,6 +799,9 @@
 	</div>
 </footer>
 
+</body>
+
+
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -808,12 +809,14 @@
   });
 
     addEventListener("DOMContentLoaded",function(){Array.from(document.getElementsByTagName("input")).forEach(function(e)   {e.type==="text"&&(e.value="")})});
+    
+
+
 </script>
 
 <script src="js/togglers.js"></script>
 <script src="js/submit.js"></script>
+<script src="js/prism.js"></script>
 
-
-</body>
 </html>
 
