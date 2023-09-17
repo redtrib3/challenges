@@ -3,7 +3,7 @@
 const burgerIcon = document.querySelector("#burger");
 const navlinks = document.querySelector("#links_Nav");
 
-const challengeMax = 14;
+const challengeMax = 15;
 
 let hiddenAccordions = document.getElementsByClassName('hide-mode');
 let showMoreBtn = document.getElementById("show-more-btn");
