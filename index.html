@@ -783,7 +783,7 @@
 
     <div class="notification">
     <button class="button is-link"  style="position: absolute; top: 10px; right: 10px;margin:10px;" onclick="window.open('https://redtribe.pythonanywhere.com/','_blank')"> Deploy </button>
-    <span class="tag is-warning is-medium">Medium</span><br><br>
+    <span class="tag is-warning is-medium">Mid</span><br><br>
        
         <b>Description:</b><br>
         <p>
@@ -807,6 +807,55 @@ Lee's Club is something you never talk about. Why? Because it is the first rule 
           <div class="control">
             <button class="button is-success" id="flag-btn-1344" onclick="submitflag('1344')">Submit Flag</button>
             <button class="button is-warning" onclick="showNotification('<b>Hint:</b>Reading between the lines is a skill (rules)','is-warning',9000)">Hint</button>
+          </div>
+        </div>
+    </div>  
+    </div>
+</div>
+
+<!--Accordion tab--->
+<a class="accordion hide-mode type-osint"  onclick="toggleAccordion('hidden-challenge-16')" id="level-mid">
+    <div class="container is-fluid" style="margin:20px">
+        <div class="notification is-dark">
+            <div class="header-wrapper">
+                <p id="challenge-header-1344"><b>[ OSINT ] :</b> Seabound </p>
+                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+            </div>
+        </div>
+    </div> 
+</a>
+
+
+<!--accordion body--->
+<div class="container is-fluid" id="hidden-challenge-16" style="margin:20px;display:none;border-left:10px solid;">
+
+    <div class="notification">
+    <button class="button is-info is-small" id="download-1343" style="position: absolute; top: 10px; right: 10px;margin:10px;" onclick="downloadFile('seabound_osint.png',1343)">Download Task files</button>
+    <span class="tag is-warning is-medium">Mid</span><br><br>
+       
+        <b>Description:</b><br>
+        <p>
+           I must go down to the seas again, to the lonely sea and the sky, <br>
+           And all I ask is a tall ship and a star to steer her by
+           <br> -John Maserfield<br><br>
+           
+           <b>Format:</b>Round the coordinates to 3 decimal places, include negative symbol.<code> rctf{XX.xxx_-Y.yyy}</code>
+        </p><br>
+    <!--input box--> 
+    <div style="margin:20px;">
+        <div class="field is-grouped">
+        
+          <div class="control is-expanded has-icons-left">
+            <input class="input is-success" id="flag-input-1345" type="text" placeholder="rctf{ ... }">
+            
+            <span class="icon is-small is-left">
+                <i class="fas fa-flag" ></i>
+            </span>
+          </div>
+          
+          <div class="control">
+            <button class="button is-success" id="flag-btn-1345" onclick="submitflag('1345')">Submit Flag</button>
+            <button class="button is-warning" onclick="showNotification('<b>Hint:</b>This island stands out by banning motor vehicles and fast food joints, in sharp contrast to the mainland.','is-warning',9000)">Hint</button>
           </div>
         </div>
     </div>  
