@@ -163,9 +163,6 @@
         <b>Description:</b><br>
         You're a Pentester at Hackevil Solutions and has been tasked with leading a black box pentest for the company. During your reconnaissance phase, you discovered a potential vulnerability that led you to a zip file. Can you find the secrets of the universe?  <br><br>Don't forget to Download the Task files!      
 
-
-
-        
     <!--input box--> 
     <div style="margin:20px;">
         <div class="field is-grouped">
@@ -901,6 +898,57 @@ Lee's Club is something you never talk about. Why? Because it is the first rule 
           
           <div class="control">
             <button class="button is-success" id="flag-btn-1346" onclick="submitflag('1346')">Submit Flag</button>
+          </div>
+        </div>
+    </div>  
+    </div>
+</div>
+
+<!--Accordion tab--->
+<a class="accordion hide-mode type-forensic" onclick="toggleAccordion('hidden-challenge-18')" id="level-hard">
+    <div class="container is-fluid" style="margin:20px">
+        <div class="notification is-dark ">
+            <div class="header-wrapper">
+                <p id="challenge-header-1347"><b>[ Forensics ] :</b> The Fish-Mail  </p>
+                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+            </div>
+        </div>
+    </div> 
+</a>
+
+
+<!--accordion body--->
+<div class="container is-fluid" id="hidden-challenge-18" style="margin:20px;display:none;border-left:10px solid;">
+
+    <div class="notification">
+    <button class="button is-info is-small" id="download-1347" style="position: absolute; top: 10px; right: 10px;margin:10px;" onclick="downloadFile('fishmail.tar.gz',1347)">Download Task files</button>
+    <span class="tag is-danger is-medium">Hard</span><br><br>
+       
+        <b>Description:</b><br>
+        <p>
+        Employees in the Calcutta shaving company has been receiving a lot of suspicious phishing email's lately.<br>
+        Although the Employees has been made aware, DevOps manager and part time Fishing Enthusiast Jyll had fallen pray to  the phishing campaign. <br>
+        
+        Jyll's desktop was infected with an unknown malware, and the security team is concerned that confidential data may have been compromised.<br>
+        
+        As a part of the Incident response team,  You've been tasked with Identifying the threat actor and analyse the situation. 
+   
+        </p><br>
+    <!--input box--> 
+    <div style="margin:20px;">
+        <div class="field is-grouped">
+        
+          <div class="control is-expanded has-icons-left">
+            <input class="input is-success" id="flag-input-1347" type="text" placeholder="rctf{ ... }">
+            
+            <span class="icon is-small is-left">
+                <i class="fas fa-flag" ></i>
+            </span>
+          </div>
+          
+          <div class="control">
+            <button class="button is-success" id="flag-btn-1347" onclick="submitflag('1347')">Submit Flag</button>
+            <button class="button is-warning" onclick="showNotification('<b>Hint:</b> The binaries used in this challenge are not malicious.','is-warning',9000)">Hint</button>
           </div>
         </div>
     </div>  
