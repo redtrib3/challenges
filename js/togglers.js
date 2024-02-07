@@ -3,7 +3,7 @@
 const burgerIcon = document.querySelector("#burger");
 const navlinks = document.querySelector("#links_Nav");
 
-const challengeMax = 18;
+const challengeMax = 19;
 
 let hiddenAccordions = document.getElementsByClassName('hide-mode');
 let showMoreBtn = document.getElementById("show-more-btn");
@@ -60,6 +60,9 @@ function toggleDifficulty(difficulty) {
     // Close all accordions when changing diff
     for (let i = 1; i <= challengeMax; i++) {
         var ch = document.getElementById(`hidden-challenge-${i}`);
+        if (ch == null) {
+            continue;
+        }
         ch.style.display = 'none';
     }
 }
@@ -101,6 +104,9 @@ function toggleType(type) {
      //close all accordions when changing diff    
     for(let i =1 ; i <= challengeMax; i++){
         var ch = document.getElementById(`hidden-challenge-${i}`);
+        if (ch == null){
+            continue;
+        }
         ch.style.display = 'none';
     }
 }
