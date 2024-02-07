@@ -234,7 +234,7 @@
 
 
 <!--Accordion tab--->
-<a class="accordion type-forensic" onclick="toggleAccordion('hidden-challenge-4')" id="level-hard" >
+<a class="accordion type-forensic" onclick="toggleAccordion('hidden-challenge-4')" id="level-mid" >
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <div class="header-wrapper"> 
@@ -250,7 +250,7 @@
 
     <div class="notification">
     <button class="button is-info is-small" id="download-1333" style="position: absolute; top: 10px; right: 10px;margin:10px;" onclick="downloadFile('gotakeawalk.jpg',1333)">Download Task files</button>
-    <span class="tag is-danger is-medium">Hard</span><br><br>
+    <span class="tag is-warning is-medium">Medium</span><br><br>
         <b>Type : </b>Forensics<br><br>
         <b>Description:</b><br>
          Walking is a simple yet effective way to improve your health. Not only is it a great form of low-impact exercise that can prevent witches from <i>hexing</i> you, but it can also make you touch grass. Go ahead, Take a walk!
@@ -566,51 +566,6 @@
     </div>
 </div>
 
-<!--Accordion tab--->
-<a class="accordion hide-mode type-osint"  onclick="toggleAccordion('hidden-challenge-11')" id="level-mid">
-    <div class="container is-fluid" style="margin:20px">
-        <div class="notification is-dark ">
-            <div class="header-wrapper">
-                <p id="challenge-header-1340"><b>[ OSINT ] :</b> MapMap!  </p>
-                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
-            </div>
-        </div>
-    </div> 
-</a>
-
-
-<!--accordion body--->
-<div class="container is-fluid" id="hidden-challenge-11" style="margin:20px;display:none;border-left:10px solid;">
-
-    <div class="notification">
-    <button class="button is-info is-small" id="download-1340" style="position: absolute; top: 10px; right: 10px;margin:10px;" onclick="downloadFile('mapmap.png',1340)">Download Task files</button>
-    <span class="tag is-warning is-medium">Mid</span><br><br>
-       
-        <b>Description:</b><br>
-        <p>
-        Luca went on a pilgrimage and hasn't come back yet. We have an image of where he was last seen. find the exact coordinates of that location from the image.<br><br>
-        
-        The flag is in format : <pre><code class="language-python">rctf{XX.xxxxxxx_YY.yyyyyy}</code></pre> where x, y are coordinates.
-        </p><br>
-    <!--input box--> 
-    <div style="margin:20px;">
-        <div class="field is-grouped">
-        
-          <div class="control is-expanded has-icons-left">
-            <input class="input is-success" id="flag-input-1340" type="text" placeholder="rctf{ ... }">
-            
-            <span class="icon is-small is-left">
-                <i class="fas fa-flag" ></i>
-            </span>
-          </div>
-          
-          <div class="control">
-            <button class="button is-success" id="flag-btn-1340" onclick="submitflag('1340')">Submit Flag</button>
-          </div>
-        </div>
-    </div>  
-    </div>
-</div>
 
 <!--Accordion tab--->
 <a class="accordion hide-mode type-web"  onclick="toggleAccordion('hidden-challenge-12')" id="level-hard">
@@ -658,7 +613,7 @@
 </div>
 
 <!--Accordion tab--->
-<a class="accordion hide-mode type-misc"  onclick="toggleAccordion('hidden-challenge-13')" id="level-easy">
+<a class="accordion hide-mode type-misc"  onclick="toggleAccordion('hidden-challenge-13')" id="level-hard">
     <div class="container is-fluid" style="margin:20px">
         <div class="notification is-dark ">
             <div class="header-wrapper">
@@ -675,7 +630,7 @@
 
     <div class="notification">
     <button class="button is-info is-small" id="download-1342" style="position: absolute; top: 10px; right: 10px;margin:10px;" onclick="downloadFile('red_blue_pill.png',1342)">Download Task files</button>
-    <span class="tag is-success is-medium">Basic</span><br><br>
+    <span class="tag is-danger is-medium">Hard</span><br><br>
        
         <b>Description:</b><br>
         <p >
@@ -696,6 +651,7 @@
           
           <div class="control">
             <button class="button is-success" id="flag-btn-1342" onclick="submitflag('1342')">Submit Flag</button>
+            <button class="button is-warning" onclick="showNotification('<b>Hint:</b>https://esolangs.org/wiki/Piet','is-warning',9000)">Hint</button>
           </div>
         </div>
     </div>  
@@ -810,54 +766,6 @@ Lee's Club is something you never talk about. Why? Because it is the first rule 
     </div>
 </div>
 
-<!--Accordion tab--->
-<a class="accordion hide-mode type-osint"  onclick="toggleAccordion('hidden-challenge-16')" id="level-mid">
-    <div class="container is-fluid" style="margin:20px">
-        <div class="notification is-dark">
-            <div class="header-wrapper">
-                <p id="challenge-header-1345"><b>[ OSINT ] :</b> Seabound </p>
-                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
-            </div>
-        </div>
-    </div> 
-</a>
-
-
-<!--accordion body--->
-<div class="container is-fluid" id="hidden-challenge-16" style="margin:20px;display:none;border-left:10px solid;">
-
-    <div class="notification">
-    <button class="button is-info is-small" id="download-1343" style="position: absolute; top: 10px; right: 10px;margin:10px;" onclick="downloadFile('seabound_osint.png',1343)">Download Task files</button>
-    <span class="tag is-warning is-medium">Mid</span><br><br>
-       
-        <b>Description:</b><br>
-        <p>
-           I must go down to the seas again, to the lonely sea and the sky, <br>
-           And all I ask is a tall ship and a star to steer her by
-           <br> -John Maserfield<br><br>
-           
-           <b>Format:</b>Round the coordinates to 3 decimal places, include negative symbol.<code> rctf{XX.xxx_-Y.yyy}</code>
-        </p><br>
-    <!--input box--> 
-    <div style="margin:20px;">
-        <div class="field is-grouped">
-        
-          <div class="control is-expanded has-icons-left">
-            <input class="input is-success" id="flag-input-1345" type="text" placeholder="rctf{ ... }">
-            
-            <span class="icon is-small is-left">
-                <i class="fas fa-flag" ></i>
-            </span>
-          </div>
-          
-          <div class="control">
-            <button class="button is-success" id="flag-btn-1345" onclick="submitflag('1345')">Submit Flag</button>
-            <button class="button is-warning" onclick="showNotification('<b>Hint:</b>This island stands out by banning motor vehicles and fast food joints, in sharp contrast to the mainland.','is-warning',9000)">Hint</button>
-          </div>
-        </div>
-    </div>  
-    </div>
-</div>
 
 <!--Accordion tab--->
 <a class="accordion hide-mode type-reverse" onclick="toggleAccordion('hidden-challenge-17')" id="level-easy">

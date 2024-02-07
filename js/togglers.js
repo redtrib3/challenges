@@ -120,6 +120,10 @@ function toggleAccordion(containerId) {
     }
     
     var hc = document.getElementById(chal_id);
+    if (hc == null){
+      continue;
+    }
+
     if (hc.style.display == 'block'){
         hc.style.display = 'none';
     }
