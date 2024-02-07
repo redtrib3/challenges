@@ -99,26 +99,39 @@ function submitflag(challengeId)
         showNotification("Flag field cannot be empty .","is-info",3000);
         thisbutton.classList.remove("is-loading");
     }
-    
-    
+        
 }
 
-function downloadFile(filename,challengeId)
-{
+
+function downloadFile(filename, challengeId) {
     downloadbtn = document.getElementById(`download-${challengeId}`);
     downloadbtn.classList.add("is-loading")
-    
+
     fetch(`https://flagsubredtrib3-1-b5762800.deta.app/download/${filename}`)
-        .then(response => response.blob())
-        .then(blob => {
-            const url = window.URL.createObjectURL(new Blob([blob]));
-            const link = document.createElement('a');
-            link.href = url;
-            link.download = filename;
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-            downloadbtn.classList.remove("is-loading");   
+        .then(response => {
+            if (response.headers.get('content-type') && response.headers.get('content-type').includes('application/json')) {
+                return response.json().then(data => {
+                    showNotification(data.message, 'notification-state', 5000);
+                    downloadbtn.classList.remove("is-loading");
+                });
+            } else {
+                return response.blob().then(blob => {
+                    const url = window.URL.createObjectURL(new Blob([blob]));
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = filename;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                    downloadbtn.classList.remove("is-loading");
+                });
+            }
+        })
+        .catch(error => {
+            // Handle errors
+            console.error('Error downloading file:', error);
+            downloadbtn.classList.remove("is-loading");
         });
-   
 }
+
+
