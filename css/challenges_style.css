@@ -1,6 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
 
+body {
+    animation: fadeInAnimation ease .9s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 .brandlogo{
 	font-family: 'Anonymous Pro',monospace; 
 	font-size: 35px;
@@ -133,3 +148,4 @@ font-family:monospace, sans-serif;
 .token-number{
     color: green;
 }
+
