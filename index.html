@@ -1000,6 +1000,57 @@ There are doubts as to whether the attackers have already broken in. The company
     </div>  
     </div>
 </div>
+
+
+<!--Accordion tab--->
+<a class="accordion hide-mode type-reverse" onclick="toggleAccordion('hidden-challenge-22')" id="level-hard">
+    <div class="container is-fluid" style="margin:20px">
+        <div class="notification is-dark ">
+            <div class="header-wrapper">
+                <p id="challenge-header-1351"><b>[ Reversing ] : </b>Secure-Vault</p>
+                <div class="chevron-dropdown-icon"><i class="fa fa-chevron-down"></i></div>
+            </div>
+        </div>
+    </div> 
+</a>
+
+
+<!--accordion body--->
+<div class="container is-fluid" id="hidden-challenge-22" style="margin:20px;display:none;border-left:10px solid;">
+
+    <div class="notification">
+    <button class="button is-info is-small" id="download-1351" style="position: absolute; top: 10px; right: 10px;margin:10px;" onclick="downloadFile('vault.tar.gz', 1351)">Download Task files</button>
+    <span class="tag is-danger is-medium">Hard</span><br><br>
+       
+        <b>Description:</b><br>
+        <p>
+        Welcome, Agent 47, the vault has been located, It's up to you to take it from here.
+        </p><br>
+        <p>
+        <strong>Note: </strong> Submit the MD5 of the retrieved secret as flag, wrap the MD5 with<code> rctf{} </code><br>
+        <b>Example:</b>If the secret is "s3c>r3t" submit in format <code>rctf{md5("sec>r3t")}</code>
+        </p>
+        
+    <!--input box--> 
+    <div style="margin:20px;">
+        <div class="field is-grouped">
+        
+          <div class="control is-expanded has-icons-left">
+            <input class="input is-success" id="flag-input-1351" type="text" placeholder="rctf{ ... }">
+            
+            <span class="icon is-small is-left">
+                <i class="fas fa-flag" ></i>
+            </span>
+          </div>
+          
+          <div class="control">
+            <button class="button is-success" id="flag-btn-1351" onclick="submitflag('1351')">Submit Flag</button>
+          </div>
+        </div>
+    </div>  
+    </div>
+</div>
+
 <!--accordion challenge containers end-->
 
 <div id="notification" class="notification is-hidden">

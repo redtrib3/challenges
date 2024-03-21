@@ -33,7 +33,7 @@ function submitflag(challengeId)
     thisbutton.classList.add("is-loading");
     
     const startChal = 1330;
-    const endChal = 1350;  //dyno
+    const endChal = 1351;  //dyno
     const ids = Object.fromEntries(Array.from({ length: endChal - startChal + 1 }, (_, i) => [startChal + i, false]));
 
     localStorage.setItem("ids",JSON.stringify(ids)); 
