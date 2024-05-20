@@ -11,3 +11,5 @@ You can try and play this [Here](https://redtrib3.github.io/challenges).
 
  Send me any feedback or ideas at: <a href="mailto:redtrib3@protonmail.com">redtrib3@protonmail.com</a> 
  
+---
+This repository is old and not used anymore. find my portfolio [here](https://redtrib3.me/redtrib3/rctf-server)
